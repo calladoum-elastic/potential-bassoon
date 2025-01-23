@@ -13,6 +13,7 @@ jobs:
           # - {os: ubuntu-24.04, generator: clang, arch: x64, config: Release}
           # - {os: ubuntu-24.04-arm, generator: clang, arch: x64, config: Release}
           # - {os: macos-14, generator: clang, arch: x64, config: Release}
+          - {os: macos-15, generator: clang, arch: x64, config: Release}
 
     runs-on: ${{ matrix.variant.os }}
     name: ${{ matrix.variant.os }} / ${{ matrix.variant.generator }} / ${{ matrix.variant.arch }} / ${{ matrix.python-version }}
