@@ -10,7 +10,7 @@ jobs:
         python-version: [3.9]
         variant:
           # - {os: windows-2022, generator: msvc, arch: x64, config: Release}
-          # - {os: ubuntu-24.04, generator: clang, arch: x64, config: Release}
+          - {os: ubuntu-24.04, generator: clang, arch: x64, config: Release}
           # - {os: ubuntu-24.04-arm, generator: clang, arch: x64, config: Release}
           # - {os: macos-14, generator: clang, arch: x64, config: Release}
 
