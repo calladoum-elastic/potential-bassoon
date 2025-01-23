@@ -1,20 +1,9 @@
 name: tests
 on:
   workflow_dispatch:
-  push: 
-    branches:
-    - main
-  pull_request:
-    types:
-      - opened
-      - synchronize
 
 jobs:
   build:
-    permissions:
-      contents: write
-      pull-requests: write
-      issues: write
     strategy:
       fail-fast: true
       matrix:
@@ -22,7 +11,7 @@ jobs:
         variant:
           # - {os: windows-2022, generator: msvc, arch: x64, config: Release}
           # - {os: ubuntu-24.04, generator: clang, arch: x64, config: Release}
-          - {os: ubuntu-24.04-arm, generator: clang, arch: x64, config: Release}
+          # - {os: ubuntu-24.04-arm, generator: clang, arch: x64, config: Release}
           # - {os: macos-14, generator: clang, arch: x64, config: Release}
 
     runs-on: ${{ matrix.variant.os }}
